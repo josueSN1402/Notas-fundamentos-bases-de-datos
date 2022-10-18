@@ -277,12 +277,16 @@ Las **relaciones** nos permiten ligar o unir nuestras diferentes entidades y se 
 
 ![src/relaciones.png](src/relaciones.png)
 
+#### Cardinalidad
 Las relaciones tienen una propiedad llamada **cardinalidad** y tiene que ver con números. Cuántos de un lado pertenecen a cuántos del otro lado:
 
 - Cardinalidad: 1 a 1
 - Cardinalidad: 0 a 1
 - Cardinalidad: 1 a N
 - Cardinalidad: 0 a N
+
+![cardinalidades](src/cardinalidades.webp)
+[Fuente](https://platzi.com/comentario/1570696/)
 
 #### Cardinalidad: 1 a 1
 
@@ -306,7 +310,7 @@ Un automóvil tiene N automóviles, pero 1 automóvil solo tiene 1 dueño.
 
 #### Cardinalidad: 0 a N
 
-![src/33333333333333333333333333333333333333333333333333333333333333333333.png](src/cardinalidad_0_N.png)
+![src/cardinalidad_0_N.png](src/cardinalidad_0_N.png)
 
 ### Clase 7 Multiples muchos
 
