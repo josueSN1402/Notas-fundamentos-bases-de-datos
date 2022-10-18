@@ -333,32 +333,35 @@ Para llevar a la práctica un diagrama debemos ir más allá y darle detalle con
 #### Tipos de dato
 
 1. **Texto (String):**
-  - CHAR(n): Siempre la misma cantidad de carácteres.
-  - VARCHAR(n): Tiene un rango de carácteres, límite de 255.
-  - TEXT: Cadenas muy grandes.
-    > CHAR(8) reserva 8 espacios en memoria de forma fija, VARCHAR(8) hace lo mismo pero crece (1,2,3...8) de manera dinámica conforme los requieres.
-2. **Números (Number):**
-  - INTEGER: Número entero.
-  - BIGINT: Números muy grandes.
-  - SMALLINT: Números pequeños, 99 o menos.
-  - DECIMAL(n,s): Pide 2 parámetros el número (n) y la cantidad de decimales (s).
-  - NUMERIC(n,s): es funcionalmente idéntico a DECIMAL.
-3. **Fecha/hora (date/time):**
-  - DATE: solo fecha (año, mes y día).
-  - TIME: solo hora.
-  - DATETIME: fecha y hora, permanece constante.
-  - TIMESTAMP: fecha y hora, pero es afectada por las configuraciones/ajustes de la zona horaria.
+    - CHAR(n): Siempre la misma cantidad de carácteres.
+    - VARCHAR(n): Tiene un rango de carácteres, límite de 255.
+    - TEXT: Cadenas muy grandes.
+      > CHAR(8) reserva 8 espacios en memoria de forma fija, VARCHAR(8) hace lo mismo pero crece (1,2,3...8) de manera dinámica conforme los requieres.
 
-    > DATETIME y TIMESTAMP tienen las siguientes diferencias:
-    > - DATETIME y TIMESTAMP requieren 5 bytes y 4 bytes, respectivamente.
-    > - TIMESTAMP se ve afectado por la zona horaria, pero DATETIME permanece constante.
-    > - El rango admitido para DATETIME y TIMESTAMP es '1000-01-01 00:00:00' a '9999-12-31 23:59:59' y '1970-01-01 00:00:01'UTC a '2038-01-19 03:14:07' UTC, respectivamente.
-    > - DATETIME no se puede indexar mientras que TIMESTAMP sí.
-    > - Las consultas con TIMESTAMP se almacenarán en caché, pero no es el caso con DATETIME.
-    > Fuente: [DATETIME vs TIMESTAMP en MySQL](https://www.delftstack.com/es/howto/mysql/datetime-vs-timestamp-in-mysql/)
+2. **Números (Number):**
+    - INTEGER: Número entero.
+    - BIGINT: Números muy grandes.
+    - SMALLINT: Números pequeños, 99 o menos.
+    - DECIMAL(n,s): Pide 2 parámetros el número (n) y la cantidad de decimales (s).
+    - NUMERIC(n,s): es funcionalmente idéntico a DECIMAL.
+
+3. **Fecha/hora (date/time):**
+    - DATE: solo fecha (año, mes y día).
+    - TIME: solo hora.
+    - DATETIME: fecha y hora, permanece constante.
+    - TIMESTAMP: fecha y hora, pero es afectada por las configuraciones/ajustes de la zona horaria.
+
+      > DATETIME y TIMESTAMP tienen las siguientes diferencias:
+      > - DATETIME y TIMESTAMP requieren 5 bytes y 4 bytes, respectivamente.
+      > - TIMESTAMP se ve afectado por la zona horaria, pero DATETIME permanece constante.
+      > - El rango admitido para DATETIME y TIMESTAMP es '1000-01-01 00:00:00' a '9999-12-31 23:59:59' y '1970-01-01 00:00:01'UTC a '2038-01-19 03:14:07' UTC, respectivamente.
+      > - DATETIME no se puede indexar mientras que TIMESTAMP sí.
+      > - Las consultas con TIMESTAMP se almacenarán en caché, pero no es el caso con DATETIME.
+      > Fuente: [DATETIME vs TIMESTAMP en MySQL](https://www.delftstack.com/es/howto/mysql/datetime-vs-timestamp-in-mysql/)
+
 
 4. **Lógicos:**
-  - BOOLEAN: _true_ o _false_
+    - BOOLEAN: _true_ o _false_
 
 
 #### Constraints (Restricciones)
