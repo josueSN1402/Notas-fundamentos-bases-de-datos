@@ -333,8 +333,8 @@ Un diagrama es como un mapa y nos ayuda a entender cuáles son las entidades con
 Para llevar a la práctica un diagrama debemos ir más allá y darle detalle con parámetros como:
 
 #### Tipos de dato
-> [Sinónimos de tipos de datos en **SQL Server**](https://learn.microsoft.com/es-es/sql/t-sql/data-types/data-type-synonyms-transact-sql?view=sql-server-ver16)
-> [Tipos de datos **MySQL**](https://norvicsoftware.com/tipos-de-datos-en-mysql/)
+> * [Sinónimos de tipos de datos en **SQL Server**](https://learn.microsoft.com/es-es/sql/t-sql/data-types/data-type-synonyms-transact-sql?view=sql-server-ver16)
+> * [Tipos de datos **MySQL**](https://norvicsoftware.com/tipos-de-datos-en-mysql/)
 
 1. **Texto (String):**
     - CHAR(n): Siempre la misma cantidad de carácteres.
@@ -376,7 +376,10 @@ Para llevar a la práctica un diagrama debemos ir más allá y darle detalle con
 4. **FOREIGN KEY:** Identifica de manera única una tupla en otra tabla.
 5. **CHECK:** Se asegura que el valor en la columna cumpla una condición dada.
 6. **DEFAULT:** Coloca un valor por defecto cuando no hay un valor especificado.
-7. **INDEX:** Se crea por columna para permitir búsquedas más rápidas, tiene la desventaja de que tiene que reindexar los registros cada vez, lo que vuelve muy lenta la operación de la bd.
+7. **INDEX:** Se crea por columna para permitir búsquedas más rápidas.
+
+> Ventaja de usar `INDEX`  : Al tener una tabla a la que no se le agreguen registros constantemente, ayuda mucho en la velocidad de consulta.
+> Desventaja de usar `INDEX`: tiene que reindexar los registros cada vez que se agregando nuevos, lo que vuelve muy lenta la operación de la BD.
 
 ### Clase 10 Diagrama Físico: normalizacion
 
