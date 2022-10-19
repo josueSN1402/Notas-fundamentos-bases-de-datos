@@ -331,6 +331,8 @@ Un diagrama es como un mapa y nos ayuda a entender cuáles son las entidades con
 Para llevar a la práctica un diagrama debemos ir más allá y darle detalle con parámetros como:
 
 #### Tipos de dato
+> [Sinónimos de tipos de datos en **SQL Server**](https://learn.microsoft.com/es-es/sql/t-sql/data-types/data-type-synonyms-transact-sql?view=sql-server-ver16)
+> [Tipos de datos **MySQL**](https://norvicsoftware.com/tipos-de-datos-en-mysql/)
 
 1. **Texto (String):**
     - CHAR(n): Siempre la misma cantidad de carácteres.
@@ -359,20 +361,20 @@ Para llevar a la práctica un diagrama debemos ir más allá y darle detalle con
       > - Las consultas con TIMESTAMP se almacenarán en caché, pero no es el caso con DATETIME.
       > Fuente: [DATETIME vs TIMESTAMP en MySQL](https://www.delftstack.com/es/howto/mysql/datetime-vs-timestamp-in-mysql/)
 
+      > [TIMESTAMP está en desuso en SQL Server](https://learn.microsoft.com/es-es/sql/t-sql/data-types/rowversion-transact-sql?view=sql-server-ver16), será reemplazado por ROWVERSION.
 
-4. **Lógicos:**
-    - BOOLEAN: _true_ o _false_
-
+  4. **Lógicos:**
+      - BOOLEAN: _true_ o _false_
 
 #### Constraints (Restricciones)
 
-**- NOT NULL:** Se asegura que la columna no tenga valores nulos
-**- UNIQUE:** Se asegura que cada valor en la columna no se repita
-**- PRIMARY KEY:** Es una combinación de NOT NULL y UNIQUE
-**- FOREIGN KEY:** Identifica de manera única una tupla en otra tabla
-**- CHECK:** Se asegura que el valor en la columna cumpla una condición dada
-**- DEFAULT:** Coloca un valor por defecto cuando no hay un valor especificado
-**- INDEX:** Se crea por columna para permitir búsquedas más rápidas, tiene la desventaja de que tiene que reindexar los registros cada vez, lo que vuelve muy lenta la operación de la bd.
+1. **NOT NULL:** Se asegura que la columna no tenga valores nulos.
+2. **UNIQUE:** Se asegura que cada valor en la columna no se repita.
+3. **PRIMARY KEY:** Es una combinación de `NOT NULL` y `UNIQUE`, es la que nos permite relacionar las tablas.
+4. **FOREIGN KEY:** Identifica de manera única una tupla en otra tabla.
+5. **CHECK:** Se asegura que el valor en la columna cumpla una condición dada.
+6. **DEFAULT:** Coloca un valor por defecto cuando no hay un valor especificado.
+7. **INDEX:** Se crea por columna para permitir búsquedas más rápidas, tiene la desventaja de que tiene que reindexar los registros cada vez, lo que vuelve muy lenta la operación de la bd.
 
 ### Clase 10 Diagrama Físico: normalizacion
 
